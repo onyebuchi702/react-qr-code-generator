@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ButtonComponent, TextField } from "./elements";
 import { Form } from "react-bootstrap";
-import { IProps } from "./types";
+import { IQrTextProps } from "./types";
 
-const Text = ({ setQrText }: IProps) => {
+const Text = ({ setQrText }: IQrTextProps) => {
   const [text, setText] = useState<string>('');
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {

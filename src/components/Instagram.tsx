@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { TextField, ButtonComponent } from "./elements";
-import { IProps } from "./types";
+import { IQrTextProps } from "./types";
 
-const Instagram = ({ setQrText }: IProps) => {
+const Instagram = ({ setQrText }: IQrTextProps) => {
   const [username, setUsername] = useState<string>('');
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {

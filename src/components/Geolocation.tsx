@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Form, Spinner } from "react-bootstrap";
 import { ButtonComponent, TextField } from "./elements";
-import { IProps } from "./types";
+import { IQrTextProps } from "./types";
 
-const Geolocation = ({ setQrText }: IProps) => {
+const Geolocation = ({ setQrText }: IQrTextProps) => {
   const [lat, setLat] = useState<number | string>('');
   const [long, setLong] = useState<number | string>('');
   const [locationLoading, setLocationLoading] = useState<boolean>(false);
