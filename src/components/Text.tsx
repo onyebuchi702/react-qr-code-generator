@@ -19,7 +19,8 @@ const Text = ({ setQrText }: IProps) => {
         className="mb-3"
         type="text"
         value={text}
-        onChange={(e) => setText(e.target.value)} 
+        onChange={(e) => setText(e.target.value)}
+        onClickIcon={() => setText('')}
       />
       <ButtonComponent title="Generate" />
     </Form>

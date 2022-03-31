@@ -19,7 +19,8 @@ const Instagram = ({ setQrText }: IProps) => {
         className="mb-3"
         type="text"
         value={username}
-        onChange={(e) => setUsername(e.target.value)} 
+        onChange={(e) => setUsername(e.target.value)}
+        onClickIcon={() => setUsername('')}
       />
       <ButtonComponent title="Generate" />
     </Form>

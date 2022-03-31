@@ -36,6 +36,7 @@ const Geolocation = ({ setQrText }: IProps) => {
         value={lat}
         label="Latitude"
         onChange={(e) => setLat(e.target.value)}
+        onClickIcon={() => setLat('')}
       />
       <TextField
         className="mb-3"
@@ -43,6 +44,7 @@ const Geolocation = ({ setQrText }: IProps) => {
         value={long}
         label="Longitude"
         onChange={(e) => setLong(e.target.value)}
+        onClickIcon={() => setLong('')}
       />
       <ButtonComponent 
         title="Set Current Location" 
@@ -56,7 +58,7 @@ const Geolocation = ({ setQrText }: IProps) => {
           <Spinner animation="border" className="me-2 align-middle" />
         }
       </ButtonComponent>
-      <ButtonComponent title="Generate" />
+      <ButtonComponent title="Generate" disabled={!lat && !long} />
     </Form>
   )
 }
