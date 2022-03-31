@@ -22,7 +22,7 @@ const Instagram = ({ setQrText }: IQrTextProps) => {
         onChange={(e) => setUsername(e.target.value)}
         onClickIcon={() => setUsername('')}
       />
-      <ButtonComponent title="Generate" />
+      <ButtonComponent title="Generate" disabled={!username} />
     </Form>
   )
 }

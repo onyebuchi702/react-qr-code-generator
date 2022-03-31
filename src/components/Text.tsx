@@ -22,7 +22,7 @@ const Text = ({ setQrText }: IQrTextProps) => {
         onChange={(e) => setText(e.target.value)}
         onClickIcon={() => setText('')}
       />
-      <ButtonComponent title="Generate" />
+      <ButtonComponent title="Generate" disabled={!text} />
     </Form>
   )
 }

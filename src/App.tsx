@@ -8,6 +8,7 @@ import QRCode from 'react-qr-code';
 import Text from './components/Text'
 import Instagram from './components/Instagram';
 import Geolocation from './components/Geolocation';
+import Mail from './components/Mail';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -32,6 +33,9 @@ const App = () => {
               <Nav.Item>
                 <Nav.Link eventKey="geo">GeoLocation</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="mail">Mail</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={9}>
@@ -44,6 +48,9 @@ const App = () => {
               </Tab.Pane> 
               <Tab.Pane eventKey="geo">
                 <Geolocation setQrText={setQrText} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="mail">
+                <Mail setQrText={setQrText} />
               </Tab.Pane>
             </Tab.Content>
           </Col>

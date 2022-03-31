@@ -6,7 +6,7 @@ import TextIcon from "./TextIcon";
 interface IProps {
   label: string;
   className: string;
-  type: string;
+  type?: string;
   value: string | number;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onClickIcon: () => void;
@@ -23,7 +23,7 @@ const TextField: FC<IProps> = ({
   return (
     <Form.Group className={className} style={{ position: 'relative' }}>
       <Form.Label>{label}</Form.Label>
-      <Form.Control 
+      <Form.Control
         type={type}
         value={value} 
         onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e)} 

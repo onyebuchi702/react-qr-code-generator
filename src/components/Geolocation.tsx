@@ -58,7 +58,7 @@ const Geolocation = ({ setQrText }: IQrTextProps) => {
           <Spinner animation="border" className="me-2 align-middle" />
         }
       </ButtonComponent>
-      <ButtonComponent title="Generate" disabled={!lat && !long} />
+      <ButtonComponent title="Generate" disabled={!lat || !long} />
     </Form>
   )
 }
