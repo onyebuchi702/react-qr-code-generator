@@ -6,11 +6,13 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import QRCode from 'react-qr-code';
 import Text from './components/Text'
+import Instagram from './components/Instagram';
+import Geolocation from './components/Geolocation';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-  const [qrText, setQrText] = useState("");
+  const [qrText, setQrText] = useState<string>("");
   
   return (
     <Container className='mx-auto'>
@@ -24,12 +26,24 @@ const App = () => {
               <Nav.Item>
                 <Nav.Link eventKey="text">Text and URLs</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="instagram">Instagram</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="geo">GeoLocation</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="text">
                 <Text setQrText={setQrText} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="instagram">
+                <Instagram setQrText={setQrText} />
+              </Tab.Pane> 
+              <Tab.Pane eventKey="geo">
+                <Geolocation setQrText={setQrText} />
               </Tab.Pane>
             </Tab.Content>
           </Col>

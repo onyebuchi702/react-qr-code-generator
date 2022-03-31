@@ -1,29 +1,29 @@
 import { useState } from "react";
-import { ButtonComponent, TextField } from "./elements";
 import { Form } from "react-bootstrap";
+import { TextField, ButtonComponent } from "./elements";
 import { IProps } from "./types";
 
-const Text = ({ setQrText }: IProps) => {
-  const [text, setText] = useState<string>('');
+const Instagram = ({ setQrText }: IProps) => {
+  const [username, setUsername] = useState<string>('');
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    setQrText(text);
+    setQrText('https://instagram.com/' + username);
     return false;
   }
 
   return (
     <Form onSubmit={handleSubmit}>
       <TextField 
-        label="Text or URL"
+        label="Username"
         className="mb-3"
         type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)} 
+        value={username}
+        onChange={(e) => setUsername(e.target.value)} 
       />
       <ButtonComponent title="Generate" />
     </Form>
   )
 }
 
-export default Text
+export default Instagram
