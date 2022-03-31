@@ -9,6 +9,8 @@ import Text from './components/Text'
 import Instagram from './components/Instagram';
 import Geolocation from './components/Geolocation';
 import Mail from './components/Mail';
+import Sms from './components/Sms';
+import Calendar from './components/Calendar';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -36,6 +38,12 @@ const App = () => {
               <Nav.Item>
                 <Nav.Link eventKey="mail">Mail</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="sms">SMS</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="calendar">Calendar</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={9}>
@@ -51,6 +59,12 @@ const App = () => {
               </Tab.Pane>
               <Tab.Pane eventKey="mail">
                 <Mail setQrText={setQrText} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="sms">
+                <Sms setQrText={setQrText} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="calendar">
+                <Calendar setQrText={setQrText} />
               </Tab.Pane>
             </Tab.Content>
           </Col>

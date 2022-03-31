@@ -6,7 +6,7 @@ import TextIcon from "./TextIcon";
 interface IProps {
   label: string;
   className: string;
-  type?: string;
+  type: string;
   value: string | number;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onClickIcon: () => void;
